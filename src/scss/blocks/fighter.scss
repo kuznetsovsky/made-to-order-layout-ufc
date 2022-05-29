@@ -1,0 +1,91 @@
+.fighter {
+  display: flex;
+
+  &__first {
+    flex: 1 1 50%;
+
+    @include from($screen-5) {
+      & .fighter__image-block {
+        position: absolute;
+        top: 165px;
+        left: 0;
+      }
+
+      & .fighter__data-block {
+        text-align: right;
+      }
+    }
+  }
+
+  &__second {
+    flex: 1 1 50%;
+
+    @include from($screen-5) {
+      & .fighter__image-block {
+        position: absolute;
+        top: 165px;
+        right: 280px;
+      }
+
+      & .fighter__data-block {
+        text-align: left;
+      }
+    }
+  }
+
+  &__image {
+    width: auto;
+    height: 290px;
+    display: block;
+    margin: 0 auto;
+
+    @include from($screen-5) {
+      display: none;
+    }
+  }
+
+  &__image-medium {
+    display: none;
+
+    @include from($screen-5) {
+      display: block;
+      position: fixed;
+    }
+  }
+
+  &__data-block {
+    padding: 16px;
+    text-align: center;
+  }
+
+  &__nickname {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+    color: $color-gray-dark-text;
+  }
+
+  &__username {
+    margin: auto 0 0;
+    font-size: 19px;
+    color: $color-black;
+    line-height: 1.2;
+
+    @include from($screen-5) {
+      font-size: 26px;
+    }
+  }
+
+  &__rank {
+    display: block;
+    font-size: 10px;
+    color: $color-gray-dark-text;
+    font-weight: normal;
+
+    @include from($screen-5) {
+      font-size: 13px;
+      line-height: 1.2;
+      padding-top: 5px;
+    }
+  }
+}

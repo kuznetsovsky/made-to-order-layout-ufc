@@ -1,0 +1,17 @@
+.separator {
+  height: 4px;
+  display: flex;
+  margin-bottom: 30px;
+
+  &__red {
+    height: inherit;
+    background-color: $color-red;
+    flex: 1 1 50%;
+  }
+
+  &__blue {
+    height: inherit;
+    background-color: $color-blue;
+    flex: 1 1 50%;
+  }
+}

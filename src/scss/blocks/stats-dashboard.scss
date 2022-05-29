@@ -1,0 +1,52 @@
+.stats-dashboard {
+  padding: 24px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  margin-bottom: 25px;
+
+  @include from($screen-4) {
+    padding: 48px;
+  }
+
+  @include from($screen-2) {
+    width: 100%;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-bottom: 0;
+  }
+
+  &__circle {
+    width: 200px;
+    margin: 0 auto 24px;
+  }
+
+  &__percent {
+    text-transform: uppercase;
+    color: #191919;
+    font-family: "KlavikaWebCondensed", "Arial Narrow", Arial, sans-serif;
+  }
+
+  &__headline {
+    margin: 0 0 30px;
+    text-align: center;
+    font-size: 18px;
+  }
+
+  &__rows {
+    max-width: 236px;
+    margin: 0;
+    text-transform: initial;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+
+    @include from($screen-4) {
+      max-width: 364px;
+    }
+  }
+
+  &__value {
+    margin-left: auto;
+    color: $color-gray-blue;
+    font-weight: 700;
+  }
+}

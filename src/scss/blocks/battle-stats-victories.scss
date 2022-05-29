@@ -1,0 +1,84 @@
+.battle-stats-victories {
+  margin: 0 auto 24px;
+  padding: 24px 0;
+  text-transform: initial;
+  max-width: 540px;
+
+  @include from($screen-2) {
+    flex-basis: 50%;
+  }
+
+  &__rows {
+    display: flex;
+    font-size: 12px;
+    margin-bottom: 10px;
+
+    @include from($screen-4) {
+      font-size: 14px;
+    }
+  }
+
+  &__col-categories {
+    flex-basis: 40%;
+    text-align: right;
+    margin-right: 0.5em;
+    font-weight: bold;
+    color: $color-gray-stats-text;
+
+    &_title {
+      color: $color-green;
+      text-transform: uppercase;
+    }
+
+    &_gray-light {
+      color: $color-gray-light-stats-text;
+      text-transform: uppercase;
+    }
+  }
+
+  &__col-number {
+    flex-basis: 10%;
+  }
+
+  &__number {
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    padding: 0.2em 0.5em;
+    background-color: $color-green;
+    color: #fff;
+    margin: 0 auto;
+
+    &_gray-light {
+      background-color: $color-gray-light-stats-text;
+    }
+  }
+
+  &__col-percent {
+    flex-basis: 50%;
+  }
+
+  &__progress-block {
+    width: 80%;
+    position: relative;
+    margin-left: 0.5em;
+  }
+
+  &__progress {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    background-color: $color-green;
+    z-index: 1;
+
+    &::after {
+      content: attr(data-progress);
+      position: absolute;
+      right: -30px;
+      top: 2px;
+      color: $color-green;
+      z-index: 3;
+    }
+  }
+}

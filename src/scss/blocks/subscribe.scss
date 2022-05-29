@@ -1,0 +1,20 @@
+.subscribe {
+  padding: 3rem 1.5rem 1.5rem;
+
+  @include from($screen-2) {
+    padding: 5.625rem 1.5rem 1.5rem;
+  }
+
+  &__headline {
+    margin: 0 0 24px;
+    font-family: "KlavikaWebCondensed", "Arial Narrow", Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    text-align: center;
+
+    @include from($screen-2) {
+      font-size: 36px;
+      margin-bottom: 3rem;
+    }
+  }
+}

@@ -1,0 +1,28 @@
+.headline {
+  margin: 0;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  color: $color-black-text;
+  line-height: 1.2;
+
+  @include from($screen-1) {
+    font-size: 40px;
+  }
+
+  @include from($screen-3) {
+    font-size: 60px;
+    margin-bottom: 4.5rem;
+  }
+
+  &_small {
+    @include from($screen-3) {
+      font-size: 48px;
+    }
+  }
+
+  &_bottom_none {
+    @include from($screen-3) {
+      margin-bottom: 15px;
+    }
+  }
+}

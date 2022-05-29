@@ -1,0 +1,11 @@
+.stats-content {
+  margin: 0 auto;
+  max-width: 1200px;
+
+  &__wrapper {
+    @include from($screen-2) {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+}

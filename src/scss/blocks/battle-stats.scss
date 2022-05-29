@@ -1,0 +1,13 @@
+.battle-stats {
+  margin: 0 18px;
+
+  &__wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+
+    @include from($screen-2) {
+      display: flex;
+      justify-content: space-around;
+    }
+  }
+}

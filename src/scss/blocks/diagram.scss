@@ -1,0 +1,127 @@
+.diagram {
+  text-align: center;
+  border-bottom: 1px solid $color-gray-light;
+  margin: 0 auto 24px;
+  padding: 24px 0;
+  max-width: 284px;
+
+  @include from($screen-2) {
+    flex-basis: 50%;
+    border-bottom: none;
+  }
+
+  &__wrapper {
+    @include from($screen-4) {
+      padding: 45px 0 0;
+    }
+
+    @include from($screen-2) {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      position: relative;
+
+      &::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        background-color: $color-gray-light;
+        width: 50%;
+        height: 1px;
+        transform: translateX(-50%);
+      }
+    }
+  }
+
+  &__headline {
+    font-size: 20px;
+    font-family: "KlavikaWebCondensed", "Arial Narrow", Arial, sans-serif;
+    line-height: 1.2;
+    font-weight: 700;
+    margin: 0 0 12px;
+  }
+
+  &__content {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  &__vertical-line {
+    flex-basis: 33.33333%;
+  }
+
+  &__line-container {
+    margin: 0 auto 12px;
+    width: 27px;
+  }
+
+  &__text-container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-size: 16px;
+    line-height: 1.2;
+    font-weight: 400;
+  }
+
+  &__property {
+    display: block;
+    font-family: "KlavikaWebCondensed", "Arial Narrow", Arial, sans-serif;
+    margin-bottom: 5px;
+  }
+
+  &__percent {
+    color: $color-red;
+  }
+
+  &__wrap {
+    padding: 25px 0 50px;
+    position: relative;
+  }
+
+  &__human-icon {
+    position: absolute;
+    top: 25px;
+    left: 8px;
+    right: 8px;
+  }
+
+  &__rows {
+    width: 284px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid $color-bottom-line;
+    padding: 1em 0 0;
+    margin: 0 0 1rem;
+  }
+
+  &__title {
+    text-transform: initial;
+    font-family: "'DIN 2014", "Arial Narrow", Arial, sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    flex-basis: 75%;
+    text-align: left;
+  }
+
+  &__group-stats {
+    margin-left: auto;
+    display: flex;
+    flex-basis: 25%;
+    font-family: "'DIN 2014 Web", "Arial Narrow", Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: $color-red;
+  }
+
+  &__res {
+    margin: 0 auto;
+    flex-basis: 50%;
+  }
+
+  &__res-percent {
+    margin: 0 auto;
+    flex-basis: 50%;
+  }
+}

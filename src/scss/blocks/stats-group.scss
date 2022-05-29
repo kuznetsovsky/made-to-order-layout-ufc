@@ -1,0 +1,46 @@
+.stats-group {
+  margin-bottom: 30px;
+
+  @include from($screen-3) {
+    border-bottom: 1px solid $color-gray-text;
+  }
+
+  &__rows {
+    display: flex;
+    margin: 0 0 1rem 0;
+    padding: 1rem 0;
+    border-bottom: 1px solid #eeeeef;
+    text-align: center;
+    font-size: 14px;
+
+    @include from($screen-1) {
+      font-size: 16px;
+    }
+
+    @include from($screen-3) {
+      border-bottom: none;
+    }
+  }
+
+  &__col-left {
+    flex: 1 1 33.3333%;
+    color: $color-red;
+
+    @include from($screen-1) {
+      text-align: right;
+    }
+  }
+
+  &__col-center {
+    flex: 1 1 33.3333%;
+  }
+
+  &__col-right {
+    flex: 1 1 33.3333%;
+    color: $color-blue;
+
+    @include from($screen-1) {
+      text-align: left;
+    }
+  }
+}

@@ -1,0 +1,10 @@
+.container {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 0 15px;
+
+  @include from($screen-3) {
+    max-width: 580px;
+    margin: 0 auto;
+  }
+}

@@ -1,0 +1,194 @@
+.bio {
+  max-width: 1200px;
+  margin: 0 auto;
+
+  @include from($screen-3) {
+    display: flex;
+    flex-wrap: nowrap;
+  }
+
+  &__image-block {
+    @include from($screen-3) {
+      display: block;
+      padding-right: 1.5rem;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  &__info-block {
+    @include from($screen-3) {
+      width: 50%;
+      padding-left: 1.5rem;
+    }
+  }
+
+  &__athlete-photo {
+    display: block;
+
+    &_mobile {
+      @include from($screen-3) {
+        display: none;
+      }
+    }
+
+    &_desktop {
+      display: none;
+
+      @include from($screen-3) {
+        display: block;
+        height: 100%;
+      }
+    }
+  }
+
+  &__info-details {
+    box-shadow: 0 8px 20px rgba(99, 91, 99, 0.1);
+
+    @include from($screen-3) {
+      box-shadow: none;
+    }
+  }
+
+  &__rows {
+    border-bottom: 1px solid $color-gray-text;
+    padding: 1rem 0;
+
+    @include from($screen-2) {
+      padding: 30px 0;
+    }
+
+    &_gray {
+      background-color: $color-gray-text;
+
+      @include from($screen-2) {
+        background-color: #fff;
+        margin-right: -0.75rem;
+        margin-left: -0.75rem;
+        padding: 30px 0.75rem;
+      }
+
+      @include from($screen-3) {
+        margin-right: 0;
+        margin-left: 0;
+        padding: 30px 0;
+      }
+    }
+  }
+
+  &__field {
+    display: flex;
+    flex-direction: column;
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
+
+    &_col-three {
+      flex: 1 1 33.3333%;
+      padding: 10px 1.5rem;
+      border-right: 1px solid $color-gray-text;
+
+      &:last-child {
+        border-right: none;
+      }
+
+      @include from($screen-2) {
+        padding: 30px 0 1.5rem 1.5rem;
+        border-right: none;
+      }
+    }
+
+    &_flex-row {
+      flex-direction: row;
+      justify-content: space-between;
+
+      @include from($screen-2) {
+        justify-content: flex-start;
+        flex-wrap: wrap;
+      }
+    }
+
+    &_mobile {
+      &_hiden {
+        display: none;
+
+        @include from($screen-3) {
+          display: block;
+        }
+      }
+    }
+
+    @include from($screen-3) {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+
+  &__field-wrapper {
+    @include from($screen-2) {
+      border-right: 1px solid $color-gray-text;
+    }
+
+    @include from($screen-3) {
+      border-right: none;
+    }
+  }
+
+  &__label {
+    font-family: "DIN 2014 Web Narrow", Arial, Helvetica, sans-serif;
+    font-size: 10px;
+    color: $color-gray-dark-text;
+
+    &_bold {
+      font-family: "DIN 2014 Web Narrow", Arial, Helvetica, sans-serif;
+      font-weight: 700;
+      color: $color-black;
+      font-size: 12px;
+
+      @include from($screen-2) {
+        flex-basis: 100%;
+      }
+    }
+
+    @include from($screen-3) {
+      font-size: 12px;
+      margin-bottom: 12px;
+    }
+  }
+
+  &__flag {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 10px;
+
+    @include from($screen-3) {
+      width: 30px;
+      height: 30px;
+    }
+  }
+
+  &__text {
+    font-size: 12px;
+    font-family: "KlavikaWebCondensed", Arial, Helvetica, sans-serif;
+
+    @include from($screen-3) {
+      font-size: 24px;
+    }
+  }
+
+  &__group-columns {
+    padding: 1.875rem 0;
+    border-bottom: 1px solid $color-gray-text;
+    display: flex;
+    text-align: center;
+    padding: 0;
+
+    @include from($screen-2) {
+      text-align-last: left;
+    }
+
+    @include from($screen-3) {
+      padding-left: 0.8rem;
+      padding-right: 0.8rem;
+    }
+  }
+}

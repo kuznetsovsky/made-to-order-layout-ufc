@@ -1,0 +1,89 @@
+.wins {
+  margin-bottom: 30px;
+
+  @include from($screen-3) {
+    border-bottom: 1px solid $color-gray-text;
+  }
+
+  &__rows {
+    display: flex;
+    margin: 0 0 1rem 0;
+    padding: 1rem 0;
+    border-bottom: 1px solid $color-gray-text;
+    text-align: center;
+    font-size: 14px;
+
+    @include from($screen-3) {
+      border-bottom: none;
+    }
+  }
+
+  &__col-stats {
+    display: flex;
+    flex: 1 1 100%;
+    text-align: center;
+    font-size: 14px;
+
+    @include from($screen-1) {
+      font-size: 16px;
+    }
+  }
+
+  &__col-stats-left {
+    flex: 1 1 33.3333%;
+    color: $color-red;
+    align-self: center;
+  }
+
+  &__col-stats-center {
+    flex: 1 1 33.3333%;
+  }
+
+  &__col-stats-right {
+    flex: 1 1 33.3333%;
+    color: $color-blue;
+    align-self: center;
+  }
+
+  &__col-progres-blue,
+  &__col-progres-red {
+    flex: 1 1 50%;
+    align-self: center;
+  }
+
+  &__progres-block {
+    position: relative;
+    background-color: $color-brogress-bg;
+    width: 100%;
+    height: 10px;
+
+    @include from($screen-1) {
+      height: 15px;
+    }
+  }
+
+  &__progres-value {
+    position: absolute;
+    height: 10px;
+    top: 0;
+    background-color: $color-blue;
+
+    @include from($screen-1) {
+      height: 15px;
+    }
+  }
+
+  &__col-progres-red .wins__progres-value {
+    background-color: $color-red;
+    right: 0;
+  }
+
+  &__col-time {
+    display: block;
+    font-size: 14px;
+    line-height: 1.2;
+    color: $color-gray-dark-text;
+    font-family: "DIN 2014 Web", Arial, sans-serif;
+  }
+
+}

@@ -1,0 +1,55 @@
+.accented-beats {
+  @include from($screen-3) {
+    border-bottom: 1px solid $color-gray-text;
+  }
+
+  &__rows {
+    display: flex;
+    text-align: center;
+    margin: 0 0 1rem 0;
+    padding: 1rem 0;
+    border-bottom: 1px solid $color-gray-text;
+    font-family: "KlavikaWebCondensed", "Arial Narrow", Arial, sans-serif;
+
+    @include from($screen-3) {
+      border-bottom: none;
+    }
+  }
+
+  &__left {
+    flex: 1 1 33.33333%;
+    color: $color-red;
+    font-size: 48px;
+    line-height: 1.2;
+  }
+
+  &__center {
+    flex: 1 1 33.33333%;
+    line-height: 1.2;
+  }
+
+  &__right {
+    flex: 1 1 33.33333%;
+    color: $color-blue;
+    font-size: 48px;
+    line-height: 1.2;
+  }
+
+  &__center-progres-block {
+    display: flex;
+    justify-content: space-around;
+    max-width: 80px;
+    display: flex;
+    margin: 0 auto 10px;
+  }
+
+  &__center-text {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.2;
+
+    @include from($screen-1) {
+      font-size: 16px;
+    }
+  }
+}

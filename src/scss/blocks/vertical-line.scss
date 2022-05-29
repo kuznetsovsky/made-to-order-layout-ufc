@@ -1,0 +1,21 @@
+.vertical-line {
+  width: 27px;
+  height: 130px;
+  position: relative;
+
+  &__prorges {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: $color-red;
+
+    &_blue {
+      background-color: $color-blue;
+    }
+  }
+
+  &_h-50 {
+    height: 50px;
+  }
+}
